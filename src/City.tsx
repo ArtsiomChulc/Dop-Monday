@@ -9,19 +9,19 @@ type CityPropsType = {
 export const City = (props: CityPropsType) => {
 
     // пока это пропускам
-    // const mappedMoney = props.data.map((el: MoneyType, index) => (
-    //     <CurrentBankomat
-    //         key={index}
-    //         money={el}
-    //     />
-    // ))
+    const mappedMoney = props.data.map((el: MoneyType, index) => (
+        <CurrentBankomat
+            key={index}
+            money={el}
+        />
+    ))
 
 
     return (
         <div>
             {/* <div>Ну все парни, мапимся -выводим наши денюжки</div>
             <div>На верстку ПОКА не обращаем внимания , сейчас занимаемся логикой</div> */}
-            <div className='banknotes-wrap'>{props.data.map((el, i) => {
+            {/* <div className='banknotes-wrap'>{props.data.map((el, i) => {
                 return (
                     <div className='banknote'>
                         <div className='banknotes-type'>{el.banknotes}</div>
@@ -30,10 +30,14 @@ export const City = (props: CityPropsType) => {
                     </div>
 
                 )
-            })}</div>
+            })}</div> */}
+            {mappedMoney}
         </div>
     );
 };
+
+
+
 //1
 // Вроде все норм, но нужно причесать код. Давайте создадим const mappedMoney = props.data.map(el=>el...)
 // Т.е. нам нужно вынести map из вертски, оставив в верстке только mappedMoney

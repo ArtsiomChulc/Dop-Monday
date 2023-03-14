@@ -1,10 +1,11 @@
 import React from 'react';
-import {MoneyType} from "./App";
+import styled from 'styled-components';
+import { MoneyType } from "./App";
 
 type CurrentBankomatPropsType = {
     money: MoneyType
 }
-export const CurrentBankomat = (props:CurrentBankomatPropsType) => {
+export const CurrentBankomat = (props: CurrentBankomatPropsType) => {
 
     return (
         <div>
@@ -12,3 +13,8 @@ export const CurrentBankomat = (props:CurrentBankomatPropsType) => {
         </div>
     );
 };
+
+const Button = styled.a`
+  
+
+`

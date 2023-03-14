@@ -1,6 +1,7 @@
 import React from 'react';
 import { CurrentBankomat } from "./CurrentBankomat";
 import { MoneyType } from "./App";
+import styled from 'styled-components';
 
 type CityPropsType = {
     data: MoneyType[] //встречаем денюжки
@@ -18,7 +19,7 @@ export const City = (props: CityPropsType) => {
 
 
     return (
-        <div>
+        <WrapperBanknotes>
             {/* <div>Ну все парни, мапимся -выводим наши денюжки</div>
             <div>На верстку ПОКА не обращаем внимания , сейчас занимаемся логикой</div> */}
             {/* <div className='banknotes-wrap'>{props.data.map((el, i) => {
@@ -32,7 +33,7 @@ export const City = (props: CityPropsType) => {
                 )
             })}</div> */}
             {mappedMoney}
-        </div>
+        </WrapperBanknotes>
     );
 };
 
@@ -52,3 +53,11 @@ export const City = (props: CityPropsType) => {
 // Вроде все норм, ну точнее почти норм- дублирование-это грех. Хотелось бы от него избавиться.
 // И StyledComponents нам в этом отлично поможет, ведь он может принимать пропсы!
 // Как это сделать в документашке
+
+const WrapperBanknotes = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+`
